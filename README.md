@@ -4,48 +4,64 @@
 
 **Studio-Grade PDF Tools. Zero Server Uploads.**
 
-The Docket is a premium, privacy-first document processing toolkit that runs entirely in your browser. Designed for community leaders, visual creatives, and independent professionals, it allows you to merge, split, sign, and format critical documents without ever handing your data over to a third-party cloud server.
+The Docket is an installable, privacy-first document processing suite running entirely inside your browser. Engineered for community leaders, organizers, visual creatives, and independent professionals, it delivers heavy-duty document handling with zero cloud uploads.
 
 What happens on your screen, stays on your screen.
 
-## 🚀 The Local-First Advantage
+---
 
-- **Ironclad Privacy:** All document processing happens client-side using JavaScript. No files are ever uploaded, ensuring complete confidentiality for sensitive records and contracts.
-- **Instant Processing:** Skip the upload progress bars and server queues. Operations execute immediately using your device's native processing power.
-- **Visual Page Editor:** Interactive UI for splitting, extracting, and removing pages. View real-time thumbnails and click to select instead of typing page numbers.
+## 🚀 Key Advantages
+
+- **100% Air-Gapped Privacy:** All document operations run locally using client-side JavaScript. No documents or data are ever transmitted to an external server.
+- **Progressive Web App (PWA):** Fully installable as a standalone desktop or mobile application directly from your browser.
+- **Offline-Ready Engine:** Custom Service Worker architecture caches core scripts, UI assets, and PDF processing libraries for full offline availability.
+- **Real-Time Visual Grid:** Visual canvas rendering for page extraction and removal—click thumbnail previews directly instead of guessing page numbers.
+- **Live Processing Diagnostics:** Integrated progress bars and stage trackers for heavy renders, OCR analysis, and ZIP packaging.
+
+---
 
 ## 🧰 Available Tools
 
-**Organize & Edit**
+### Organize & Edit
 
-- **Merge PDF:** Combine multiple PDFs into a single document.
-- **Split PDF:** Extract every _N_ pages into a ZIP, or pull specific ranges.
-- **Extract & Remove:** Visually select thumbnail pages to keep or delete.
-- **Rotate:** Spin pages to the correct orientation.
-- **Page Numbers & Watermarks:** Stamp text or numerics perfectly across your document.
+- **Merge PDF:** Combine multiple PDF documents with drag-to-reorder file management.
+- **Split PDF:** Burst files into recurring _N_-page chunks or extract specific ranges into standalone files.
+- **Remove Pages:** Visual preview grid to select and delete unwanted pages.
+- **Extract Pages:** Interactive thumbnail selector to isolate and export targeted pages.
+- **Rotate PDF:** Adjust document orientations clockwise, counter-clockwise, or 180°.
+- **Page Numbers:** Dynamic automated pagination positioned at headers or footers.
+- **Watermark:** Burn custom angled watermark stamps with customizable opacity and scaling.
 
-**Convert & Optimize**
+### Convert & Extract
 
-- **Images to PDF / PDF to Images:** Lossless conversions compiling to PDF or exporting to ZIP.
-- **HTML to PDF:** Render raw HTML code directly into a clean PDF.
-- **OCR PDF:** Extract text from scanned images using optical character recognition.
-- **E-Sign PDF:** Draw and stamp your signature visually onto any page.
+- **Images to PDF:** Merge collections of PNG and JPG files into a single unified document.
+- **PDF to Images:** Batch render PDF pages to crisp PNG assets packaged inside a ZIP archive.
+- **HTML to PDF:** Compile raw HTML markup directly into a structured document.
+- **OCR PDF:** Extract text from scanned documents locally using optical character recognition.
+
+### Security & Forms
+
+- **Sign PDF:** Digital signature canvas with placement coordinates and drag-to-position preview.
+- **Enterprise Features (Coming Soon):** Password encryption, DOCX/XLSX/PPTX format conversion, and vector stream redaction.
+
+---
 
 ## 🛠️ Tech Stack
 
-The Docket is built with lightweight, vanilla web technologies to ensure speed and zero-dependency bloat:
+- **Core Runtime:** Vanilla ECMAScript (ES6+), HTML5, CSS3
+- **Offline & PWA:** Service Worker API, Cache Storage API, Web App Manifest
+- **PDF Manipulation:** `pdf-lib`, `pdf.js`
+- **Text Extraction & OCR:** `Tesseract.js`
+- **Packaging & Export:** `JSZip`, `html2pdf.js`
+- **Typography:** Space Grotesk, IBM Plex Sans, IBM Plex Mono
 
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **Core PDF Engine:** `pdf-lib` & `pdf.js`
-- **File Handling:** `JSZip`
-- **Text Extraction:** `Tesseract.js` (OCR)
-- **HTML Rendering:** `html2pdf.js`
+---
 
-## 💻 Getting Started
+## 💻 Local Setup & Installation
 
-Because The Docket is 100% client-side, there is no complex backend to configure or database to spin up.
+Clone the repository and launch directly in any modern browser:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mzafeer335/the-docket.git
-   ```
+```bash
+git clone [https://github.com/mzafeer335/the-docket.git](https://github.com/mzafeer335/the-docket.git)
+cd the-docket
+```
