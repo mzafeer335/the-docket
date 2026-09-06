@@ -1,5 +1,7 @@
 # The Docket ⚡
 
+**[Live Portal: Launch The Docket](https://mzafeer335.github.io/the-docket)**
+
 **Studio-Grade PDF Tools. Zero Server Uploads.**
 
 The Docket is a premium, privacy-first document processing toolkit that runs entirely in your browser. Designed for community leaders, visual creatives, and independent professionals, it allows you to merge, split, sign, and format critical documents without ever handing your data over to a third-party cloud server.
