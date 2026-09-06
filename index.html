@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Docket — Premium Document Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- PDF & Utility Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="title-block">
+    <h1>The Docket</h1>
+    <h2 class="hero-sub">Studio-Grade PDF Tools. Zero Server Uploads.</h2>
+    <p>Merge, split, format, and sign your most critical documents directly in your browser. Complete privacy, heavy-duty processing power, and absolutely no tracking.</p>
+  </div>
+  <div class="stamp">A ZAFEER DEVELOPED PRODUCT</div>
+</header>
+
+<section class="marketing-band">
+  <div class="market-col">
+    <h3 class="copper-text">THE LOCAL-FIRST ADVANTAGE</h3>
+    <div class="market-item">
+      <h4>Ironclad Privacy</h4>
+      <p>Traditional platforms force you to hand over data to unknown cloud servers. We flipped the model. From sensitive community records to confidential client contracts, everything is processed locally on your machine.</p>
+    </div>
+    <div class="market-item">
+      <h4>Instant Processing</h4>
+      <p>Skip the upload progress bars and server queues. The Docket operates with the rugged, reliable power of a finely tuned engine—delivering cinematic speed and immediate results, even on massive files.</p>
+    </div>
+    <div class="market-item">
+      <h4>Always Ready, Even Offline</h4>
+      <p>Whether you are working from a high-rise desk or organizing on the ground out in the village, The Docket works the moment your browser opens. No internet connection? No problem.</p>
+    </div>
+  </div>
+  
+  <div class="market-col">
+    <h3 class="copper-text">BUILT FOR REAL WORKFLOWS</h3>
+    <div class="market-item">
+      <h4>Community Leaders & Organizers</h4>
+      <p>Securely manage local administrative forms, watermark campaign materials, and prep high-quality, print-ready banners without ever risking a data leak.</p>
+    </div>
+    <div class="market-item">
+      <h4>Visual Creatives</h4>
+      <p>Convert and extract high-res images without devastating compression. Keep every ounce of detail, contrast, and vintage grain exactly as you intended.</p>
+    </div>
+    <div class="market-item">
+      <h4>Independent Professionals</h4>
+      <p>E-sign binding agreements, merge scattered vendor invoices, and redact sensitive financial data in seconds without a bloated subscription.</p>
+    </div>
+  </div>
+</section>
+
+<div class="index-wrap">
+  <div class="category-row" id="catRow">
+    <button class="cat-btn active" data-cat="all">All tools</button>
+    <button class="cat-btn" data-cat="organize">Organize</button>
+    <button class="cat-btn" data-cat="optimize">Optimize</button>
+    <button class="cat-btn" data-cat="to-pdf">Convert to PDF</button>
+    <button class="cat-btn" data-cat="from-pdf">Convert from PDF</button>
+    <button class="cat-btn" data-cat="edit">Edit PDF</button>
+    <button class="cat-btn" data-cat="security">Security</button>
+  </div>
+
+  <div class="tool-grid" id="toolGrid">
+    <!-- Organize -->
+    <div class="tool-card" data-cat="organize" data-tool="merge"><span class="tag">ORGANIZE</span><span class="name">Merge PDF</span><span class="desc">Combine several PDFs into one.</span></div>
+    <div class="tool-card" data-cat="organize" data-tool="split"><span class="tag">ORGANIZE</span><span class="name">Split PDF</span><span class="desc">Extract pages into separate files.</span></div>
+    <div class="tool-card" data-cat="organize" data-tool="remove"><span class="tag">ORGANIZE</span><span class="name">Remove pages</span><span class="desc">Delete specific pages.</span></div>
+    <div class="tool-card" data-cat="organize" data-tool="extract"><span class="tag">ORGANIZE</span><span class="name">Extract pages</span><span class="desc">Pull a page range out.</span></div>
+
+    <!-- Optimize -->
+    <div class="tool-card" data-cat="optimize" data-tool="compress"><span class="tag">OPTIMIZE</span><span class="name">Compress PDF</span><span class="desc">Reduce file size for sharing.</span></div>
+    <div class="tool-card" data-cat="optimize" data-tool="repair"><span class="tag">OPTIMIZE</span><span class="name">Repair PDF</span><span class="desc">Fix corrupted or damaged PDFs.</span></div>
+    <div class="tool-card" data-cat="optimize" data-tool="ocr"><span class="tag">OPTIMIZE</span><span class="name">OCR PDF</span><span class="desc">Make scanned text searchable.</span></div>
+
+    <!-- Convert TO PDF -->
+    <div class="tool-card" data-cat="to-pdf" data-tool="img2pdf"><span class="tag">TO PDF</span><span class="name">JPG to PDF</span><span class="desc">Turn images into a single PDF.</span></div>
+    <div class="tool-card" data-cat="to-pdf" data-tool="word2pdf"><span class="tag">TO PDF</span><span class="name">WORD to PDF</span><span class="desc">Convert DOC/DOCX to PDF.</span></div>
+    <div class="tool-card" data-cat="to-pdf" data-tool="ppt2pdf"><span class="tag">TO PDF</span><span class="name">POWERPOINT to PDF</span><span class="desc">Convert PPT/PPTX to PDF.</span></div>
+    <div class="tool-card" data-cat="to-pdf" data-tool="excel2pdf"><span class="tag">TO PDF</span><span class="name">EXCEL to PDF</span><span class="desc">Convert XLS/XLSX to PDF.</span></div>
+    <div class="tool-card" data-cat="to-pdf" data-tool="html2pdf"><span class="tag">TO PDF</span><span class="name">HTML to PDF</span><span class="desc">Convert webpages to PDF.</span></div>
+
+    <!-- Convert FROM PDF -->
+    <div class="tool-card" data-cat="from-pdf" data-tool="pdf2img"><span class="tag">FROM PDF</span><span class="name">PDF to JPG</span><span class="desc">Extract pages as images.</span></div>
+    <div class="tool-card" data-cat="from-pdf" data-tool="pdf2word"><span class="tag">FROM PDF</span><span class="name">PDF to WORD</span><span class="desc">Convert PDF to editable DOCX.</span></div>
+    <div class="tool-card" data-cat="from-pdf" data-tool="pdf2ppt"><span class="tag">FROM PDF</span><span class="name">PDF to POWERPOINT</span><span class="desc">Convert PDF to PPTX slides.</span></div>
+    <div class="tool-card" data-cat="from-pdf" data-tool="pdf2excel"><span class="tag">FROM PDF</span><span class="name">PDF to EXCEL</span><span class="desc">Extract tables to XLSX.</span></div>
+    <div class="tool-card" data-cat="from-pdf" data-tool="pdf2pdfa"><span class="tag">FROM PDF</span><span class="name">PDF to PDF/A</span><span class="desc">Convert for long-term archiving.</span></div>
+
+    <!-- Edit -->
+    <div class="tool-card" data-cat="edit" data-tool="rotate"><span class="tag">EDIT</span><span class="name">Rotate PDF</span><span class="desc">Turn pages to the right way up.</span></div>
+    <div class="tool-card" data-cat="edit" data-tool="pagenum"><span class="tag">EDIT</span><span class="name">Add page numbers</span><span class="desc">Number every page.</span></div>
+    <div class="tool-card" data-cat="edit" data-tool="watermark"><span class="tag">EDIT</span><span class="name">Add watermark</span><span class="desc">Stamp text across pages.</span></div>
+    <div class="tool-card" data-cat="edit" data-tool="crop"><span class="tag">EDIT</span><span class="name">Crop PDF</span><span class="desc">Trim margins and page edges.</span></div>
+    <div class="tool-card" data-cat="edit" data-tool="editpdf"><span class="tag">EDIT</span><span class="name">Edit PDF</span><span class="desc">Add text, shapes, and images.</span></div>
+    <div class="tool-card" data-cat="edit" data-tool="forms"><span class="tag">EDIT</span><span class="name">PDF Forms</span><span class="desc">Create or fill interactive forms.</span></div>
+
+    <!-- Security -->
+    <div class="tool-card" data-cat="security" data-tool="unlock"><span class="tag">SECURITY</span><span class="name">Unlock PDF</span><span class="desc">Remove password protection.</span></div>
+    <div class="tool-card" data-cat="security" data-tool="protect"><span class="tag">SECURITY</span><span class="name">Protect PDF</span><span class="desc">Add a password to your file.</span></div>
+    <div class="tool-card" data-cat="security" data-tool="esign"><span class="tag">SECURITY</span><span class="name">Sign PDF</span><span class="desc">Draw and place your signature.</span></div>
+    <div class="tool-card" data-cat="security" data-tool="redact"><span class="tag">SECURITY</span><span class="name">Redact PDF</span><span class="desc">Permanently black out text.</span></div>
+    <div class="tool-card" data-cat="security" data-tool="compare"><span class="tag">SECURITY</span><span class="name">Compare PDF</span><span class="desc">Highlight differences between files.</span></div>
+  </div>
+</div>
+
+<section class="workspace" id="workspace">
+  <div class="ws-head">
+    <h2 id="wsTitle"></h2>
+    <button class="close-btn" id="wsClose">CLOSE ✕</button>
+  </div>
+  <div id="wsBody"></div>
+  <div class="status" id="wsStatus"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>The Docket</h3>
+      <p>Every document task, filed in one place. A premium, locally-processed toolkit designed for speed, privacy, and precision.</p>
+    </div>
+    <div class="footer-links">
+      <div class="link-column">
+        <h4>Tools</h4>
+        <a href="#workspace" onclick="document.querySelector('[data-tool=\'merge\']').click()">Merge PDF</a>
+        <a href="#workspace" onclick="document.querySelector('[data-tool=\'split\']').click()">Split PDF</a>
+        <a href="#workspace" onclick="document.querySelector('[data-tool=\'esign\']').click()">E-Sign PDF</a>
+        <a href="#workspace" onclick="document.querySelector('[data-tool=\'ocr\']').click()">OCR PDF</a>
+      </div>
+      <div class="link-column">
+        <h4>Resources</h4>
+        <a href="#">API Documentation</a>
+        <a href="#">Developer Hub</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="link-column">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 The Docket. A Zafeer developed product.</p>
+    <div class="footer-badge">PROCESSED LOCALLY · SECURE</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
